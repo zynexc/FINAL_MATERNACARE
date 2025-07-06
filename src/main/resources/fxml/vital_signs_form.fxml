@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.maternacare.controller.VitalSignsFormController" spacing="0" styleClass="form-root">
+    <VBox styleClass="form-section" spacing="18">
+        <Label fx:id="patientNameLabel" styleClass="form-patient-name" />
+        <Label text="Follow Up Vital Signs" styleClass="section-title"/>
+        <GridPane hgap="20" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25"/>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25"/>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25"/>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25"/>
+            </columnConstraints>
+
+            <!-- Row 0: Chief Complaint | Presentation -->
+            <Label text="Chief Complaint:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="chiefComplaintField" styleClass="form-field" promptText="e.g. Headache" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Presentation:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <ComboBox fx:id="presentationComboBox" styleClass="form-field combo-box" promptText="Select Presentation" GridPane.rowIndex="0" GridPane.columnIndex="3">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cephalic" />
+                        <String fx:value="Breech" />
+                        <String fx:value="Transverse" />
+                        <String fx:value="Oblique" />
+                        <String fx:value="No Information" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <!-- Row 1: Blood Pressure | Fetal Heart Tone -->
+            <Label text="Blood Pressure:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="bloodPressureField" styleClass="form-field" promptText="e.g. 120/80" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Fetal Heart Tone (FHT):" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <TextField fx:id="fhtField" styleClass="form-field" promptText="e.g. 140" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+            <!-- Row 2: Pulse Rate | Respiratory Rate -->
+            <Label text="Pulse Rate:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="pulseRateField" styleClass="form-field" promptText="e.g. 75" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Respiratory Rate:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <TextField fx:id="respiratoryRateField" styleClass="form-field" promptText="e.g. 18" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+            <!-- Row 3: Weight | Fundal Height -->
+            <Label text="Weight (lbs):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="weightField" styleClass="form-field" promptText="e.g. 120" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Fundal Height:" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+            <TextField fx:id="fundalHeightField" styleClass="form-field" promptText="e.g. 32" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+            <!-- Row 4: Height | To Comeback -->
+            <Label text="Height (cm):" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="heightField" styleClass="form-field" promptText="e.g. 160" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="To come Back:" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+            <DatePicker fx:id="toComeBackPicker" styleClass="form-field" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+            <!-- Row 5: Remarks (full width) -->
+            <Label text="Remarks:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextArea fx:id="remarksField" styleClass="form-field" promptText="Optional remarks..." GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="3" prefRowCount="2"/>
+        </GridPane>
+        <Label fx:id="messageLabel" styleClass="message-label" managed="false" visible="false"/>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Back" fx:id="backButton" minWidth="100" styleClass="back-button"/>
+            <Button text="Save" fx:id="saveButton" minWidth="100" styleClass="save-button"/>
+        </HBox>
+    </VBox>
+</VBox> 

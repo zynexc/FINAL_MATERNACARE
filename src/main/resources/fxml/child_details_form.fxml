@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox styleClass="child-details-section" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <Text fx:id="childNumberText" styleClass="child-number-text"/>
+    
+    <GridPane styleClass="form-grid" hgap="15" vgap="15">
+        <!-- Row 1 -->
+        <Label text="Type of Delivery:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="deliveryTypeCombo" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Gender:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="genderCombo" styleClass="combo-box" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        
+        <!-- Row 2 -->
+        <Label text="Place of Delivery:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="placeOfDeliveryField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Year Delivered:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="yearDeliveredField" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        
+        <!-- Row 3 -->
+        <Label text="Attended by:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="attendedByField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Label text="Status:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="statusCombo" styleClass="combo-box" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        
+        <!-- Row 4 -->
+        <Label text="Birthdate:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <DatePicker fx:id="birthdatePicker" styleClass="date-picker" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        
+        <Label text="Tetanus Toxoid Status:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <HBox spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <ComboBox fx:id="tetanusStatusCombo" styleClass="combo-box" prefWidth="120"/>
+            <TextField fx:id="tetanusYearField" styleClass="form-field" promptText="Year" prefWidth="80"/>
+        </HBox>
+    </GridPane>
+</VBox> 

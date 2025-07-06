@@ -1,0 +1,85 @@
+- Dashboard 
+( High Risk ) 
+done - Categories to be included ( 36yrs old, minor age, heart problems, diabetic, etc.)
+    ( Possbile New Graph )
+done - Categories:
+		- Age (graph)
+		- Health Related Problems (graph)
+	- The information in the high risk patients record is missing.
+	- The AOG should be days not weeks
+done- center din patient id
+
+- Maternal Form
+	-create a textfield in the maternal form that takes information about the patient if they have health related problems that may affects their pregnancy and set them as a high risk pregnant. 
+done-place the AOG along side with the last menstrual period and expected delivery date.
+	done - then calculate how many days in the Last Menstrual Period and Expected Delivery Date, then convert it to days and simply show how many weeks in those days.
+done- when it is saved, it should show that the added maternal details have been saved
+	- preg history, add abortion	
+done - tanggalin auto ng gravida
+
+- Maternal Records
+done - make the search filters per (patient id, name, purok, age).
+done - optional: create button to put a specific person to the high risk. 
+	- tanggalin yung white sa taas, yung form ng follow up check up
+done- patient id i center
+	- sa view details pag pinindot mo edit --- back --- di nagana back to records
+done - Follow up check up - in the presentation there should be a drop down on the side
+	- View Details - in the fields make the fonts bigger and bold.
+	- lagyan ng parang button sa view details
+done - sunod sunod pababa (lmp, edd, aog, weeks, days)
+						 (gravida, para,/ term, preterm, abort, living)
+	- edit form, successful saved pop up
+
+
+- General Concern 
+	- bold each text in every title example: basic & contact information, vital signs, pregnancy history
+done- remarks in the follow up, it should be under the remarks:
+			-sample:
+				from:
+				Rermarks: (details) 
+
+				to:
+				Remarks:
+					(details)
+	- GPTPAL
+
+may option dito dapat kung may nabuhay
+main concern is yung sa highrisk sa dashboard kasi hindi lang pasok teenage pregnancy
+20-35= ok
+19 below = teenage
+36+ = high ris
+hika
+diabetes 
+sakit sa puso
+sa check up na pumapasok yung high risk at interview kasi dun na malalaman
+naka base palagi sa history
+
+ditong part jan yung mga ibat ibang highrisks na patients kasi sabi hindi lang dapat nakafocuse sa teenage meron din yung mga diabetes may mga hika high risk din yun
+
+form section dapat ang aog ay nasa taas (?)
+
+- action step: 
+- palagay rin anong meaning ng aog hehe
+
+ditong part yugn aog age of gestation tapos yung aog na nasa taas parang may sinugest sya na dapat nasa taas na section pa
+
+nag test sila sa maternal health record at pinakita sa staff. 27 weeks may mga days. gptpal and gpp1 magkaiba yun
+
+- action step: palagay anong mga detailed step ang gagawin like sa gptpal and gpp1 (?) palagay rinnnn meaning
+
+
+Gptpal (number lang nilalagay dito) 
+G-Gravida (ilang beses nag buntis) 
+Para(kung ilang beses nanganak yung patient na yung baby is 20weeks or more palang nasa sinapupunan)  
+Term (kung ilan yung successful na ipinanganak na hindi immature yung baby)
+Pre-Term (kung ilang beses nanganak yung patient na yung baby is between 20-36 weeks palang nasa sinapupunan) 
+Abortion - Kung ilan yung pina laglag
+Living Children - kung ilan yung buhay don sa mga naipanganak
+yung gpp1 pala is erase mo na yun wala pala yun focus lang sa gptpal then yung meaning ayan
+
+kung nag bubuntis sya noon sya ba ay hinighblood or inklamsya
+- action step:
+ano lang parang nasa high risk parin yan kung may highblood ba sya or inlamasya nasa high risk sya
+sa pregnant history kung abortion lang nakalagay may ibang section na na hindi makakapag fill out kasi hanggang abortion lang 
+- action step:
+dito kasi ang mang yayari is kapag nakalagay is abortion is may ibang section sa GRAVIDA na hindi nya na ififillout

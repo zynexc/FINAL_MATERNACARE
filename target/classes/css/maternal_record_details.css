@@ -1,0 +1,10 @@
+.back-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-family: "Poppins Regular";
+    -fx-cursor: hand;
+}
+.back-button:hover {
+    -fx-background-color: #5a6268;
+} 

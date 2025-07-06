@@ -1,0 +1,347 @@
+.title, .header-title {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-weight: bold;
+}
+.subtitle {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: normal;
+}
+
+* {
+    -fx-font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+.root {
+    -fx-background-color: #FEE2E2;
+    -fx-background-radius: 15;
+}
+
+.form-title {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.search-button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+}
+
+.search-button:hover {
+    -fx-background-color: #a33c3c;
+}
+
+.records-table {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, #e0e0e0, 8, 0.2, 0, 2);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.records-table .column-header-background {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.records-table .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 8 5;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.records-table .column-header .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+}
+
+.records-table .table-row-cell {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #f0f0f0;
+    -fx-background-radius: 0 0 10 10;
+}
+
+.records-table .table-row-cell:odd {
+    -fx-background-color: white;
+}
+
+.records-table .table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.records-table .table-cell {
+    -fx-text-fill: black;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-padding: 8 5;
+    -fx-alignment: center-left;
+}
+
+.records-table .table-cell:empty {
+    -fx-border-color: transparent;
+}
+
+/* Make the table scrollable */
+.records-table {
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+/* Style the scrollbars */
+.records-table .scroll-bar:vertical {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-width: 12;
+    -fx-padding: 0 2 0 2;
+}
+
+.records-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #adb5bd;
+    -fx-background-radius: 6;
+}
+
+.records-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #6c757d;
+}
+
+.records-table .scroll-bar:horizontal {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-height: 12;
+    -fx-padding: 2 0 2 0;
+}
+
+.records-table .scroll-bar:horizontal .thumb {
+    -fx-background-color: #adb5bd;
+    -fx-background-radius: 6;
+}
+
+.records-table .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #6c757d;
+}
+
+.maternal-records-table .column-header-background {
+    -fx-background-color: #4CAF50;
+    -fx-border-color: #388E3C;
+    -fx-border-width: 0 1 2 0;
+}
+
+.maternal-records-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.maternal-records-table .table-cell {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 5 10;
+}
+
+.maternal-records-table .table-row-cell:odd {
+    -fx-background-color: #f2f2f2;
+}
+
+.maternal-records-table .table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.maternal-records-table .filler {
+    -fx-background-color: #4CAF50;
+}
+
+.view-more-button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-min-width: 120px;
+    -fx-max-width: 120px;
+}
+
+.view-more-button:hover {
+    -fx-background-color: #a33c3c;
+}
+
+/* Responsive column widths */
+#patientIdColumn {
+}
+
+#lastNameColumn {
+}
+
+#firstNameColumn {
+}
+
+#ageColumn {
+}
+
+#ageOfGestationColumn {
+}
+
+#lmpColumn {
+}
+
+#eddColumn {
+}
+
+#contactColumn {
+}
+
+#emailColumn {
+}
+
+#viewMoreColumn {
+}
+
+/* Make the search field responsive */
+#searchField {
+    -fx-min-width: 200px;
+    -fx-pref-width: 400px;
+    -fx-max-width: 800px;
+}
+
+/* Maternal Records Styles */
+.content-container {
+    -fx-background-color: #FEE2E2 !important;
+    -fx-background-radius: 15 !important;
+    -fx-padding: 20 !important;
+    -fx-font-family: 'Poppins', Arial, sans-serif !important;
+    -fx-text-fill: black !important;
+}
+
+.content-container TextField,
+.content-container ComboBox,
+.content-container DatePicker {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+}
+
+.follow-up-button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-min-width: 90px;
+    -fx-max-width: 90px;
+}
+
+.follow-up-button:hover {
+    -fx-background-color: #a33c3c;
+}
+
+.header-title { 
+    -fx-font-size: 24px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: #111827; 
+}
+
+.record-id-bold, .record-id-bold .text {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-weight: bold;
+}
+
+.edit-button {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5 12;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-family: "Poppins Regular";
+}
+
+.table-button:hover {
+    -fx-background-color: #b71c1c;
+}
+
+.save-button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-family: "Poppins Regular";
+    -fx-cursor: hand;
+}
+.save-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.clear-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-family: "Poppins Regular";
+    -fx-cursor: hand;
+}
+.clear-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.delete-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-family: "Poppins Regular";
+    -fx-cursor: hand;
+}
+.delete-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.inline-form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.inline-form-container .text-field,
+.inline-form-container .text-area,
+.inline-form-container .date-picker {
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.inline-form-container .text-field:focused,
+.inline-form-container .text-area:focused,
+.inline-form-container .date-picker:focused {
+    -fx-border-color: #eb0000;
+}
+
+.form-patient-name {
+    -fx-font-size: 18px;
+    -fx-font-family: "Poppins Bold";
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+    -fx-padding: 0 0 10px 0;
+}
+
+.back-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-family: "Poppins Regular";
+    -fx-cursor: hand;
+}
+.back-button:hover {
+    -fx-background-color: #5a6268;
+}

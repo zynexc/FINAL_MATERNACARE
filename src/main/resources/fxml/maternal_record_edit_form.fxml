@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.shape.SVGPath?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox fx:id="rootPane" styleClass="form-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maternacare.controller.MaternalRecordEditFormController"
+      style="-fx-background-color: #FEE2E2; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER">
+        <Label fx:id="inlineNotificationLabel" styleClass="inline-notification" visible="false" managed="false" />
+    </HBox>
+
+    <Label text="Maternal Form" styleClass="title" />
+    <Text styleClass="subtitle" text="Initial Data Entry for New and Ongoing Maternal Cases"/>
+
+    <ScrollPane fitToWidth="true" styleClass="scroll-pane" VBox.vgrow="ALWAYS">
+        <VBox styleClass="form-content">
+            <Label fx:id="messageLabel" visible="false" managed="false" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" />
+            <!-- Form Timestamp Section -->
+            <HBox styleClass="timestamp-section" alignment="CENTER_RIGHT">
+                <Label fx:id="formTimestampLabel" styleClass="timestamp-label"/>
+            </HBox>
+
+            <!-- Personal Information Section -->
+            <VBox styleClass="form-section">
+                <Text styleClass="section-title">Personal &amp; Contact Information</Text>
+                <GridPane hgap="15" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                    </columnConstraints>
+                    <!-- Personal Information Fields -->
+                    <Label text="Patient ID:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="patientIdField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Enter Patient ID *"/>
+                    <Label text="Full Name:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="fullNameField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Enter Full Name *"/>
+                    <Label text="Date of Birth:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <DatePicker fx:id="dateOfBirthPicker" styleClass="form-field date-picker" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Select Date of Birth *"/>
+                    <Label text="Age:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField fx:id="ageField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Enter Age *"/>
+                    <Label text="Husband's Name:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="husbandNameField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Husband's Name *"/>
+                    <Label text="Address:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField fx:id="addressField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Address *"/>
+                    <Label text="Contact Number:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="contactNumberField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Contact Number *"/>
+                    <Label text="Email:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <TextField fx:id="emailField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Email*"/>
+                    <Label text="Purok:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <ComboBox fx:id="purokCombo" styleClass="form-field combo-box" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Select Purok *"/>
+                    <Label text="Barangay Residency Number:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                    <TextField fx:id="barangayResidencyNumberField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Enter Barangay Residency Number *"/>
+                </GridPane>
+            </VBox>
+
+            <!-- Pregnancy Information Section -->
+            <VBox styleClass="form-section">
+                <Text styleClass="section-title">Pregnancy Information</Text>
+                <GridPane styleClass="form-grid" hgap="15" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                    </columnConstraints>
+                    <!-- Row 1 -->
+                    <Label text="Last Menstrual Period:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <DatePicker fx:id="lastMenstrualPeriodPicker" styleClass="form-field date-picker" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Select Last Menstrual Period *"/>
+                    <Label text="Gravida:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="gravidaField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Enter Gravida *"/>
+                    <!-- Row 2 -->
+                    <Label text="Expected Delivery Date:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <DatePicker fx:id="expectedDeliveryDatePicker" styleClass="form-field date-picker" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Select Expected Delivery Date *"/>
+                    <Label text="Para:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField fx:id="paraField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Enter Para *"/>
+                    <!-- Row 3 -->
+                    <Label text="Age of Gestation:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="ageOfGestationField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Age of Gestation *" editable="false" />
+                    <Label text="Term:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField fx:id="termField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Term *"/>
+                    <!-- Row 4 -->
+                    <Label text="Age of Gestation (Weeks):" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="ageOfGestationWeeksField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Age of Gestation (Weeks) *" editable="false" />
+                    <Label text="Preterm:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <TextField fx:id="pretermField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Preterm *"/>
+                    <!-- Row 5 -->
+                    <Label text="Age of Gestation (Days):" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="ageOfGestationDaysField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Enter Age of Gestation (Days) *" editable="false" />
+                    <Label text="Abortion:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                    <TextField fx:id="abortionField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Enter Abortion *"/>
+                    <!-- Row 6 -->
+                    <Label text="" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                    <Label text="" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                    <Label text="Living Children:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+                    <TextField fx:id="livingChildrenField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="5" maxWidth="Infinity" promptText="Enter Living Children *"/>
+                </GridPane>
+            </VBox>
+
+            <!-- Vital Signs Section -->
+            <VBox styleClass="form-section,vital-signs-section">
+                <Text styleClass="section-title">Vital Signs</Text>
+                <GridPane styleClass="form-grid" hgap="15" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                        <ColumnConstraints hgrow="NEVER" percentWidth="25"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="25" maxWidth="Infinity"/>
+                    </columnConstraints>
+                    <!-- Row 1 -->
+                    <Label text="Chief Complaint:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="chiefComplaintField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Enter Chief Complaint *"/>
+                    <Label text="Presentation:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <ComboBox fx:id="presentationCombo" styleClass="form-field combo-box" GridPane.columnIndex="3" GridPane.rowIndex="0" maxWidth="Infinity" promptText="Select Presentation *"/>
+                    <!-- Row 2 -->
+                    <Label text="Blood Pressure:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="bloodPressureField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Enter Blood Pressure (e.g., 120/80) *"/>
+                    <Label text="Fetal Heart Tone (FHT):" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField fx:id="fetalHeartToneField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="Infinity" promptText="Enter Fetal Heart Tone (bpm) *"/>
+                    <!-- Row 3 -->
+                    <Label text="Pulse Rate:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="pulseRateField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Pulse Rate (bpm) *"/>
+                    <Label text="Respiratory Rate:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField fx:id="respiratoryRateField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="2" maxWidth="Infinity" promptText="Enter Respiratory Rate (bpm) *"/>
+                    <!-- Row 4 -->
+                    <Label text="Weight (lbs):" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="weightField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Weight (lbs) *"/>
+                    <Label text="Fundal Height (cm):" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <TextField fx:id="fundalHeightField" styleClass="form-field padded-text-field" GridPane.columnIndex="3" GridPane.rowIndex="3" maxWidth="Infinity" promptText="Enter Fundal Height (cm) *"/>
+                    <!-- Row 5 -->
+                    <Label text="Height (cm):" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="heightField" styleClass="form-field padded-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Enter Height (cm) *"/>
+                    <Label text="To Come Back:" styleClass="form-label" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                    <DatePicker fx:id="toComeBackPicker" styleClass="form-field date-picker" GridPane.columnIndex="3" GridPane.rowIndex="4" maxWidth="Infinity" promptText="Select To Come Back Date *"/>
+                    <!-- Row 6: Remarks -->
+                    <Label text="Remarks:" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                    <TextArea fx:id="remarksField" styleClass="form-field" wrapText="true" prefRowCount="2" promptText="Enter Remarks" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="3"/>
+                </GridPane>
+            </VBox>
+
+            <!-- Button Container -->
+            <HBox styleClass="button-container">
+                <Button fx:id="backButton" text="Back" styleClass="back-button" onAction="#handleBack"/>
+                <Button fx:id="saveButton" text="Save" styleClass="save-button" onAction="#handleSave"/>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</VBox> 

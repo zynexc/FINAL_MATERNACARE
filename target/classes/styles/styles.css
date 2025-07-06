@@ -1,0 +1,267 @@
+/* Global Font Settings */
+.root {
+    -fx-font-family: 'Poppins';
+}
+
+/* Use Poppins Bold for bold text */
+.bold, .title, .header-title, .section-title, .stat-number, .bold-label {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-weight: bold;
+}
+
+/* Pregnancy History Styles */
+.history-box {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+}
+
+.history-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.form-value {
+    -fx-text-fill: #333333;
+}
+
+.form-label {
+    -fx-text-fill: #666666;
+    -fx-font-weight: bold;
+}
+
+/* Login Screen Styles */
+.login-root {
+    -fx-background-color: #fff;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+}
+
+.login-logo {
+    -fx-padding: 0 0 10 0;
+}
+
+.login-title {
+    -fx-font-size: 48px;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-padding: 0 0 10 0;
+}
+
+.login-card {
+    -fx-background-color: #fdf7f7;
+    -fx-background-radius: 32;
+    -fx-padding: 32 32 32 32;
+    -fx-effect: dropshadow(gaussian, #e0e0e0, 20, 0.2, 0, 4);
+    -fx-spacing: 12;
+}
+
+.login-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #222;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-font-weight: 500;
+}
+
+.login-field {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+    -fx-padding: 8 16;
+    -fx-font-size: 16px;
+    -fx-pref-width: 100%;
+}
+
+/* Password field specific styling for smaller circles */
+.password-field {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+    -fx-padding: 8 16;
+    -fx-font-size: 12px; /* Smaller font size for password dots */
+    -fx-pref-width: 100%;
+}
+
+/* Username field styling to match password field appearance */
+.username-field {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #ccc;
+    -fx-padding: 8 16;
+    -fx-font-size: 12px; /* Smaller font size to match password field */
+    -fx-pref-width: 100%;
+}
+
+/* Make password dots smaller */
+.password-field .text {
+    -fx-font-size: 8px; /* Very small dots */
+}
+
+.login-button {
+    -fx-background-color: #ff161f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-font-size: 15px;
+    -fx-padding: 8 0;
+    -fx-pref-width: 320px;
+    -fx-max-width: 320px;
+    -fx-min-width: 320px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-margin: 10 0 0 0;
+}
+
+.section-title {
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-font-weight: bold;
+}
+
+/* Maternal Form Input Icons */
+.full-name-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.contact-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C7.61 21 2 15.39 2 8.5a1 1 0 0 1 1-1H6.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.email-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.address-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.id-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.dob-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.age-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.husband-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.purok-field {
+    -fx-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right 8px center;
+    -fx-background-size: 18px 18px;
+}
+.padded-text-field {
+    -fx-padding: 0 28 0 8; /* top, right, bottom, left */
+}
+
+/* Custom style for the Presentation ComboBox in follow-up form */
+.presentation-combo {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-pref-width: 180px;
+    -fx-alignment: center-left;
+    -fx-effect: none;
+}
+
+.presentation-combo:focused {
+    -fx-border-color: #007bff;
+    -fx-background-color: #fff;
+}
+
+.presentation-combo .arrow {
+    -fx-background-color: #6c757d;
+}
+
+.form-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-pref-width: 180px;
+    -fx-alignment: center-left;
+    -fx-effect: none;
+}
+
+.form-field:focused {
+    -fx-border-color: #007bff;
+    -fx-background-color: #fff;
+}
+
+.combo-box.form-field, .combo-box.presentation-combo {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-pref-width: 180px;
+    -fx-alignment: center-left;
+    -fx-effect: none;
+}
+
+.combo-box.form-field:focused, .combo-box.presentation-combo:focused {
+    -fx-border-color: #007bff;
+    -fx-background-color: #fff;
+}
+
+.combo-box .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.inline-notification {
+    -fx-background-color: #fff;
+    -fx-text-fill: #eb0000;
+    -fx-padding: 14 32;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #00000044, 8, 0.2, 2, 2);
+    -fx-opacity: 0.97;
+    -fx-max-width: 400px;
+    -fx-alignment: center;
+    -fx-translate-y: 20;
+    -fx-cursor: default;
+    -fx-z-index: 1000;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-position: absolute;
+    -fx-hgrow: ALWAYS;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-text-alignment: center;
+}

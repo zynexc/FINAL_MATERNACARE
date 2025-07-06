@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.maternacare.controller.PregnancyHistoryTableController"
+      spacing="10" styleClass="form-section">
+    
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Gravida Count Input -->
+    <GridPane hgap="10" vgap="10">
+        <Label text="Number of Pregnancies (Gravida):" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="gravidaCountField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button fx:id="updateRowsButton" text="Update Table" onAction="#handleUpdateRows" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    </GridPane>
+
+    <TableView fx:id="pregnancyHistoryTable" styleClass="table-view" VBox.vgrow="ALWAYS" 
+               maxWidth="Infinity" fixedCellSize="45">
+        <columns>
+            <!-- GRAVIDA -->
+            <TableColumn fx:id="pregnancyNumberColumn" prefWidth="80" text="GRAVIDA" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Type of Delivery -->
+            <TableColumn fx:id="deliveryTypeColumn" prefWidth="120" text="Type of Delivery" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Gender -->
+            <TableColumn fx:id="genderColumn" prefWidth="80" text="Gender" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Place of Delivery -->
+            <TableColumn fx:id="placeOfDeliveryColumn" prefWidth="120" text="Place of Delivery" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Year Delivered -->
+            <TableColumn fx:id="yearDeliveredColumn" prefWidth="100" text="Year Delivered" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Attended By -->
+            <TableColumn fx:id="attendedByColumn" prefWidth="120" text="Attended By" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Status -->
+            <TableColumn fx:id="statusColumn" prefWidth="100" text="Status" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- Birth Date -->
+            <TableColumn fx:id="birthDateColumn" prefWidth="120" text="Birth Date" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            
+            <!-- TT Injection Status With Year -->
+            <TableColumn fx:id="ttInjectionColumn" prefWidth="100" text="TT Injection Status With Year" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+        </columns>
+    </TableView>
+
+    <!-- Instructions for users -->
+    <Label text="Double-click on any row to edit pregnancy history details" styleClass="instruction-label"/>
+</VBox> 

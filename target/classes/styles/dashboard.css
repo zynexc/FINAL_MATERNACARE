@@ -1,0 +1,331 @@
+.root {
+    -fx-background-color: #FEE2E2;
+    -fx-font-family: 'Poppins', Arial, sans-serif;
+    -fx-background-radius: 15;
+}
+
+.chart-container {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 5;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.input-form {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 5;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 4;
+}
+
+.button:hover {
+    -fx-background-color: #a33c3c;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4;
+    -fx-padding: 5;
+}
+
+.chart {
+    -fx-padding: 10;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #374151;
+}
+
+.chart-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.axis-label {
+    -fx-font-size: 12px;
+}
+
+/* Card Styles */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+    
+}
+
+/* Typography */
+.title {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.subtitle {
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 16px;
+    -fx-text-fill: #222;
+    -fx-font-weight: normal;
+}
+
+/* Chart Styles */
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.chart .axis-label {
+    -fx-text-fill: #374151;
+}
+
+.chart .axis-tick-label {
+    -fx-text-fill: #374151;
+}
+
+.chart-wrapper {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-padding: 10px;
+}
+
+/* Table Styles */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+    -fx-padding: 0;
+    -fx-fixed-cell-size: 45;
+}
+
+/* Hide horizontal scrollbar */
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-max-height: 0;
+}
+
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-opacity: 0;
+}
+
+.table-view .scroll-bar:horizontal .track {
+    -fx-opacity: 0;
+}
+
+/* Ensure table content fits without horizontal scroll */
+.table-view .virtual-flow {
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+    -fx-hbar-policy: never;
+}
+
+.table-view .virtual-flow .clipped-container {
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-font-weight: bold;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 10 6;
+    -fx-cursor: default;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-cursor: default;
+    -fx-font-size: 13px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-view .column-resize-line {
+    -fx-background-color: #E5E7EB;
+}
+
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-padding: 10 15;
+    -fx-border-color: transparent;
+    -fx-text-fill: #374151;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #F9FAFB;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+/* Selected Row Styles */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #eb0000; /* Main red */
+}
+
+.table-view .table-row-cell:selected .text {
+    -fx-fill: white; /* White text for selected cells */
+}
+
+/* Ensure columns cannot be reordered */
+.table-view .column-header .label {
+    -fx-cursor: default;
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Disable column reordering visual cues */
+.table-view .column-header .arrow {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .sort-order {
+    -fx-background-color: transparent;
+}
+
+/* Table button styles */
+.table-button {
+    -fx-background-color: #eb0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14;
+    -fx-background-radius: 4;
+    -fx-font-size: 12px;
+    -fx-min-width: 90px;
+    -fx-max-width: 130px;
+}
+
+.table-button:hover {
+    -fx-background-color: #a33c3c;
+}
+
+.view-more-button {
+    -fx-background-color: #007bff;
+}
+
+.view-more-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.follow-up-button {
+    -fx-background-color: #28a745;
+}
+
+.follow-up-button:hover {
+    -fx-background-color: #1e7e34;
+}
+
+/* Table container styles */
+.table-container {
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+    -fx-padding: 10;
+}
+
+/* Specific table styling for better content display */
+.records-table {
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+}
+
+/* Pregnancy history table specific styling */
+.pregnancy-history-table {
+    -fx-pref-width: 100%;
+    -fx-max-width: Infinity;
+}
+
+/* New card style for the demographics and stat cards */
+.demographics-card, .stat-card {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+    -fx-spacing: 5;
+    
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
+}
+
+.stat-number {
+    -fx-font-size: 2.8em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+    -fx-padding: 0 0 0 10px;
+    -fx-alignment: center-left;
+}
+
+.stat-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #00ff15;
+}
+
+/* Highlight severe cases with red */
+#severeCasesLabel {
+    -fx-text-fill: #eb0000;
+}
+
+.section-title {
+    -fx-font-family: 'Poppins Bold';
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d32f2f;
+    -fx-padding: 0 0 10 0;
+}
+
+.pie-legend-box {
+    -fx-font-size: 3px;
+    -fx-alignment: bottom-center;
+    -fx-padding: 0 0 0 40px;
+}

@@ -1,0 +1,49 @@
+/* Main application styles */
+.content-container {
+    -fx-padding: 20;
+    -fx-background-color: #f4f4f4;
+}
+
+/* Sidebar styles */
+.sidebar {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1 0 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+}
+
+.nav-button:hover {
+    -fx-background-color: #e8e8e8;
+}
+
+.nav-button.selected {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #007bff;
+    -fx-border-color: #007bff;
+    -fx-border-width: 0 0 0 3;
+}
+
+/* Remove old tab styles */
+.tab-pane,
+.tab-pane .tab-header-area,
+.tab-pane .tab-header-area .tab-header-background,
+.tab-pane .tab,
+.tab-pane .tab .tab-label,
+.tab-pane .tab:selected,
+.tab-pane .tab:selected .tab-label,
+.tab-pane .tab-header-area .headers-region,
+.tab-pane .tab-content-area {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-rotate: 0;
+}   

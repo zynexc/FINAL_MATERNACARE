@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.maternacare.controller.DashboardController"
+      spacing="20" styleClass="root">
+    <VBox>
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <VBox>
+                <Text styleClass="title" text="Dashboard"/>
+                <Text styleClass="subtitle" text="Analytics overview for severe maternal cases."/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Logout" onAction="#handleLogout" styleClass="logout-button"/>
+        </HBox>
+    </VBox>
+
+    <!-- Stat Cards -->
+    <HBox spacing="20" VBox.vgrow="NEVER">
+        <!-- Total Patients Card -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <VBox HBox.hgrow="ALWAYS">
+                    <Text styleClass="stat-title" text="Total Patients"/>
+                    <Label fx:id="totalPatientsLabel" styleClass="stat-number" text="0"/>
+                    <Text styleClass="stat-subtitle" text="All records in the system"/>
+                </VBox>
+                <StackPane fx:id="totalPatientsIconContainer" styleClass="icon-container"/>
+            </HBox>
+        </VBox>
+
+        <!-- Completed Forms Card -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <VBox HBox.hgrow="ALWAYS">
+                    <Text styleClass="stat-title" text="Completed Forms"/>
+                    <Label fx:id="completedFormsLabel" styleClass="stat-number" text="0"/>
+                    <Text styleClass="stat-subtitle" text="Records that have been filled"/>
+                </VBox>
+                <StackPane fx:id="completedFormsIconContainer" styleClass="icon-container"/>
+            </HBox>
+        </VBox>
+
+        <!-- Severe Cases Card -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <VBox HBox.hgrow="ALWAYS">
+                    <Text styleClass="stat-title" text="Severe Cases"/>
+                    <Label fx:id="severeCasesLabel" styleClass="stat-number" text="0"/>
+                    <Text styleClass="stat-subtitle" text="Requires attention"/>
+                </VBox>
+                <StackPane fx:id="severeCasesIconContainer" styleClass="icon-container-danger"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <!-- Charts Card -->
+    <VBox style="-fx-background-color: #fff; -fx-padding: 24; -fx-background-radius: 16; -fx-border-radius: 16;" spacing="10" VBox.vgrow="NEVER" prefHeight="420">
+        <Text styleClass="section-title" text="Patient Demographics"/>
+        <HBox spacing="40" VBox.vgrow="ALWAYS">
+            <VBox styleClass="demographics-chart-box" HBox.hgrow="ALWAYS" alignment="CENTER" style="-fx-background-color: #fff; -fx-padding: 20; -fx-background-radius: 10; -fx-border-radius: 10;">
+                <AreaChart fx:id="barChart" title="Age Distribution (Severe Cases)" HBox.hgrow="ALWAYS" minWidth="400.0" prefWidth="420.0" prefHeight="350.0" style="-fx-padding: 0 0 0 0;">
+                    <xAxis>
+                        <CategoryAxis label="Age Groups"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Number of Patients"/>
+                    </yAxis>
+                </AreaChart>
+            </VBox>
+            <VBox styleClass="demographics-chart-boxs" HBox.hgrow="ALWAYS" alignment="CENTER" style="-fx-background-color: #fff; -fx-padding: 20; -fx-background-radius: 10; -fx-border-radius: 10;">
+                <PieChart fx:id="pieChart" title="Patients per Purok" minWidth="700.0" prefWidth="750.0" prefHeight="520.0" labelsVisible="false" style="-fx-padding: 0 0 0 0;" />
+                <HBox fx:id="purokLegendBox" alignment="BOTTOM_CENTER" spacing="15" styleClass="pie-legend-box" style="-fx-padding: 5 0 0 0;" />
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <!-- Patient Records Table Card -->
+    <VBox styleClass="card" spacing="10" VBox.vgrow="ALWAYS" minHeight="400">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Text styleClass="section-title" text="High-Risk Patient Records"/>
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+        
+        <TableView fx:id="recordsTable" VBox.vgrow="ALWAYS" styleClass="table-view" prefHeight="350.0" maxHeight="Infinity" minHeight="300">
+            <columns>
+                <TableColumn fx:id="patientIdColumn" text="Patient ID" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="lastNameColumn" text="Full Name"/>
+                <TableColumn fx:id="firstNameColumn" text="First Name" visible="false"/>
+                <TableColumn fx:id="ageColumn" text="Age"/>
+                <TableColumn fx:id="ageOfGestationColumn" text="Age of Gestation"/>
+                <TableColumn fx:id="purokColumn" text="Purok"/>
+                <TableColumn fx:id="contactColumn" text="Contact Number"/>
+                <TableColumn fx:id="emailColumn" text="Email Address"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox> 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.maternacare.controller.MaternalRecordsController"
+      style="-fx-background-color: #FEE2E2; -fx-background-radius: 15;"
+      styleClass="content-container"
+      spacing="10"
+      VBox.vgrow="ALWAYS"
+      fx:id="rootVBox">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text styleClass="form-title" text="Maternal Health Records"/>
+    <Text styleClass="subtitle" text="Comprehensive Record of Maternal Health and Past Consultations."/>
+    
+    <VBox fx:id="formContainer" styleClass="inline-form-container" />
+
+    <VBox spacing="10" VBox.vgrow="ALWAYS" fillWidth="true">
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <TextField fx:id="searchField" promptText="Search in records..." HBox.hgrow="ALWAYS"/>
+            <Button text="Refresh" onAction="#handleRefresh" styleClass="search-button"/>
+        </HBox>
+        
+        <TableView fx:id="recordsTable" styleClass="table-view" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS" 
+                   maxWidth="Infinity" fixedCellSize="45">
+            <columns>
+                <TableColumn fx:id="patientIdColumn" text="Patient ID" styleClass="record-id-bold" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="lastNameColumn" text="Full Name" styleClass="record-id-bold" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="firstNameColumn" text="First Name" sortable="false" reorderable="false" visible="false"/>
+                <TableColumn fx:id="ageColumn" text="Age" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="lmpColumn" text="Last Menstrual Period" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="eddColumn" text="Expected Delivery Date" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="contactColumn" text="Contact Number" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="emailColumn" text="Email Address" sortable="false" reorderable="false" visible="false"/>
+                <TableColumn fx:id="viewMoreColumn" text="View More" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="followUpColumn" text="Follow Up" sortable="false" reorderable="false" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox> 

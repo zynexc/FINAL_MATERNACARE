@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_LEFT" spacing="15" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.maternacare.controller.MaternalRecordDetailsController"
+      styleClass="form-container">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Form Timestamp -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Form Information</Text>
+        <Label fx:id="formTimestampLabel" text="N/A" />
+    </VBox>
+
+    <!-- Personal Information -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Personal Information</Text>
+        <GridPane hgap="15" vgap="10">
+            <Label text="Patient ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="patientIdLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label fx:id="fullNameLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Date of Birth:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="dateOfBirthLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+            <Label text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="patientAgeLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <Label text="Husband's Name:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="husbandNameLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        </GridPane>
+    </VBox>
+
+    <!-- Contact Information -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Contact Information</Text>
+        <GridPane hgap="15" vgap="10">
+            <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="addressLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3" />
+            
+            <Label text="Purok:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label fx:id="purokLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Contact Number:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="contactNumberLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="emailLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="3" />
+        </GridPane>
+    </VBox>
+
+    <!-- Vital Signs -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Vital Signs</Text>
+        <GridPane hgap="15" vgap="10">
+            <Label text="Blood Pressure:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="bloodPressureLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Body Temperature:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label fx:id="temperatureLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+            <Label text="Chief Complaint:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label fx:id="chiefComplaintLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Weight:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="weightLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+            <Label text="Height:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="heightLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+    </VBox>
+
+    <!-- Pregnancy Information -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Pregnancy Information</Text>
+        <GridPane hgap="15" vgap="10">
+            <Label text="Age of Gestation:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="ageOfGestationLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Fetal Heart Tone:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label fx:id="fetalHeartToneLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+            <Label text="Fundal Height:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label fx:id="fundalHeightLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Presentation:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="presentationLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+            <Label text="Last Menstrual Period:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="lastMenstrualPeriodLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <Label text="Expected Delivery Date:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="expectedDeliveryDateLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            
+            <Label text="Para:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label fx:id="paraLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+            <Label text="Abortion:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="abortionLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            
+            <Label text="Living Children:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label fx:id="livingChildrenLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            
+            <Label text="Next Appointment:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="nextAppointmentLabel" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        </GridPane>
+    </VBox>
+
+    <!-- Remarks -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Remarks</Text>
+        <Label fx:id="remarksLabel" text="N/A" />
+    </VBox>
+
+    <!-- Pregnancy History Details Section -->
+    <VBox styleClass="form-section">
+        <Text styleClass="section-title">Pregnancy History Details</Text>
+        <VBox fx:id="pregnancyHistoryContainer" spacing="10">
+            <!-- Pregnancy history details will be added here dynamically -->
+        </VBox>
+    </VBox>
+</VBox> 

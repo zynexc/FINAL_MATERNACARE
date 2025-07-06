@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="detailsRoot" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.maternacare.controller.MaternalRecordDetailsPageController"
+      spacing="12" styleClass="details-root" style="-fx-background-color: #fff;">
+
+    <HBox alignment="CENTER" >
+        <Label fx:id="inlineNotificationLabel" styleClass="inline-notification" visible="false" managed="false" />
+    </HBox>
+
+    <HBox styleClass="header-bar" alignment="CENTER" spacing="10">
+        <Label text="Maternal Record Details" styleClass="header-titles" />
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button text="Back to Records" onAction="#handleBackDebug" styleClass="back-button" />
+    </HBox>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox spacing="18">
+            <VBox styleClass="section-card">
+                <VBox styleClass="personal-info-container">
+                    <Label text="Personal Information" styleClass="header-title" style="-fx-font-weight: bold;" />
+                    <GridPane hgap="10" vgap="6">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                        </columnConstraints>
+
+                        <Label text="Patient ID :" GridPane.rowIndex="0" />
+                        <Label fx:id="patientIdLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Purok :" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Label fx:id="purokLabel" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                        <Label text="Barangay Residency Number :" GridPane.rowIndex="1" />
+                        <Label fx:id="barangayResidencyNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Email :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="emailLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                        <Label text="Full Name :" GridPane.rowIndex="2" />
+                        <Label fx:id="fullNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Last Menstrual Period :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="lmpLabel" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                        <Label text="Date of Birth :" GridPane.rowIndex="3" />
+                        <Label fx:id="dobLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Expected Delivery Date :" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="eddLabel" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                        <Label text="Age :" GridPane.rowIndex="4" />
+                        <Label fx:id="ageLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Age of Gestation:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="aogDisplayLabel" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                        <Label text="Husband's Name :" GridPane.rowIndex="5" />
+                        <Label fx:id="husbandNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="AOG (Weeks):" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label fx:id="aogWeeksLabel" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                        <Label text="Contact Number :" GridPane.rowIndex="6" />
+                        <Label fx:id="contactNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="AOG (Days):" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label fx:id="aogDaysLabel" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+
+                        <Label text="Address :" GridPane.rowIndex="7" />
+                        <Label fx:id="addressLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="3" />
+                    </GridPane>
+                </VBox>
+            </VBox>
+
+            <VBox styleClass="section-card">
+                <VBox styleClass="vital-signs-container">
+                    <Label text="Vital Signs" styleClass="header-title" style="-fx-font-weight: bold;" />
+                    <GridPane hgap="10" vgap="14">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="25" />
+                            <ColumnConstraints percentWidth="25" />
+                            <ColumnConstraints percentWidth="25" />
+                            <ColumnConstraints percentWidth="25" />
+                        </columnConstraints>
+
+                        <Label text="Chief Complaint :" GridPane.rowIndex="0" />
+                        <Label fx:id="chiefComplaintLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Presentation :" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Label fx:id="presentationLabel" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                        <Label text="Blood Pressure :" GridPane.rowIndex="1" />
+                        <Label fx:id="bloodPressureLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Fetal Heart Tone (FHT) :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="fhtLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                        <Label text="Pulse Rate :" GridPane.rowIndex="2" />
+                        <Label fx:id="pulseRateLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Respiratory Rate :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="respiratoryRateLabel" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                        <Label text="Weight (lbs) :" GridPane.rowIndex="3" />
+                        <Label fx:id="weightLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Fundal Height (cm) :" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="fundalHeightLabel" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                        <Label text="Height (cm) :" GridPane.rowIndex="4" />
+                        <Label fx:id="heightLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="To Come Back :" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="toComeBackLabel" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                        <Label text="Remarks :" GridPane.rowIndex="5" />
+                        <Label fx:id="remarksLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="3" />
+                    </GridPane>
+                </VBox>
+            </VBox>
+
+            <HBox spacing="16" alignment="CENTER" styleClass="stat-boxes">
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Gravida" />
+                    <Label fx:id="gravidaLabel" styleClass="stat-value" />
+                </VBox>
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Para" />
+                    <Label fx:id="paraLabel" styleClass="stat-value" />
+                </VBox>
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Term" />
+                    <Label fx:id="termLabel" styleClass="stat-value" />
+                </VBox>
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Preterm" />
+                    <Label fx:id="pretermLabel" styleClass="stat-value" />
+                </VBox>
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Abortion" />
+                    <Label fx:id="abortionLabel" styleClass="stat-value" />
+                </VBox>
+                <VBox styleClass="stat-box" HBox.hgrow="ALWAYS">
+                    <Label text="Living Children" />
+                    <Label fx:id="livingChildrenLabel" styleClass="stat-value" />
+                </VBox>
+            </HBox>
+
+            <VBox styleClass="section-card">
+                <VBox styleClass="pregnancy-history-container">
+                    <Label text="Pregnancy History Details" styleClass="header-title" style="-fx-font-weight: bold;" />
+                    <VBox fx:id="pregnancyHistoryContainer" spacing="18" />
+                </VBox>
+            </VBox>
+
+            <VBox styleClass="section-card">
+                <VBox styleClass="follow-up-container">
+                    <Label text="Follow-Up Vital Signs" styleClass="header-title" style="-fx-font-weight: bold;" />
+                    <VBox fx:id="followUpFormContainer" />
+                    <VBox fx:id="followUpContainer" spacing="18" />
+                </VBox>
+            </VBox>
+            <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="button-bar" style="-fx-padding: 0 40 0 0;">
+                <Button fx:id="editRecordButton" text="Edit" styleClass="edit-button" />
+                <Button fx:id="deleteRecordButton" text="Delete" styleClass="delete-button" />
+                <Button fx:id="addHighRiskButton" text="Add to High-Risk Patient" styleClass="edit-button" />
+                <Button fx:id="removeHighRiskButton" text="Remove to High Risk" styleClass="delete-button" />
+            </HBox>
+            <Label fx:id="statusMessageLabel" visible="false" managed="false" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10 0 0 0;" />
+            <Region minHeight="30" />
+        </VBox>
+    </ScrollPane>
+    <HBox fx:id="deleteConfirmBox" alignment="CENTER" spacing="10" visible="false" managed="false" style="-fx-padding: 0 0 16 0;">
+        <Label text="Are you sure you want to delete this maternal record?" style="-fx-font-weight: bold; -fx-text-fill: #d32f2f;" />
+        <Button text="Confirm" fx:id="confirmDeleteButton" styleClass="delete-button" />
+        <Button text="Cancel" fx:id="cancelDeleteButton" styleClass="back-button" />
+    </HBox>
+</VBox>

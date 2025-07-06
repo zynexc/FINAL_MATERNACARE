@@ -1,0 +1,45 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Poppins";
+    -fx-background-color: #F9FAFB; /* Light gray background */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #FFFFFF; /* White sidebar */
+    -fx-border-color: #E5E7EB; /* Light gray border */
+    -fx-border-width: 0 1px 0 0;
+    -fx-alignment: TOP_CENTER;
+}
+
+/* Navigation Button Styles */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #374151; /* Dark gray text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 20px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 160px; /* Fixed width for buttons */
+}
+
+.nav-button:hover {
+    -fx-background-color: #FEE2E2; /* Light red/pink on hover */
+    -fx-text-fill: #eb0000; /* Main red text on hover */
+}
+
+.nav-button.selected {
+    -fx-background-color: #eb0000; /* Main red for selected */
+    -fx-text-fill: #FFFFFF; /* White text for selected */
+}
+
+/* Content Area */
+.content-container {
+    -fx-padding: 20px;
+}
+
+#mainLayout {
+    -fx-background-color: white;
+} 
